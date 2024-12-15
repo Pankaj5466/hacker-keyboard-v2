@@ -160,12 +160,6 @@ will do later when time-->
     </Row>    
     <Row>
         <Key
-            android:codes="@integer/key_tab"
-            android:keyIcon="@drawable/sym_keyboard_tab"
-            android:iconPreview="@drawable/sym_keyboard_feedback_tab"
-            android:keyEdgeFlags="left"
-            android:isModifier="true" />
-        <Key
             android:keyLabel="q"
             android:popupKeyboard="@xml/kbd_popup_template"
             android:popupCharacters="@string/alternates_for_q"
@@ -207,11 +201,11 @@ will do later when time-->
             android:popupKeyboard="@xml/kbd_popup_template"
             android:popupCharacters="@string/alternates_for_p" />
         <Key
-            android:keyLabel="'"
-            android:shiftLabel="&quot;"
-            android:popupKeyboard="@xml/kbd_popup_template"
-            android:popupCharacters="|"
-            android:keyEdgeFlags="right" />
+            android:codes="@integer/key_tab"
+            android:keyIcon="@drawable/sym_keyboard_tab"
+            android:iconPreview="@drawable/sym_keyboard_feedback_tab"
+            android:keyEdgeFlags="right"
+            android:isModifier="true" />
     </Row>
 <!--    (100-4)/11-->
     <Row   android:keyWidth="8.72%p">
