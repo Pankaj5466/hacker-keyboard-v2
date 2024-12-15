@@ -18,6 +18,8 @@
 */
 -->
 
+<!--messier87: change key height, as default one not goo
+35dp and 43dp looks good-->
 <Keyboard
     xmlns:android="http://schemas.android.com/apk/res-auto"
     android:keyWidth="9.09090909%p"
@@ -26,13 +28,14 @@
     android:verticalPad="@dimen/key_vertical_pad_compact"
     android:layoutRows="5"
     android:layoutColumns="11"
- >
+    android:keyHeight="40dp"
+    >
 <!--    extra keys (custom addition )-->
     <Row>
         <Key
             android:keyLabel="Esc"
             android:codes="@integer/key_escape"
-            android:keyWidth="10.7142855%p"
+            android:keyWidth="13%p"
             android:keyEdgeFlags="left"
             android:isModifier="true" />
 
@@ -41,6 +44,31 @@
             android:shiftLabel="@string/key_ad11_shift"
             android:popupKeyboard="@xml/kbd_popup_template"
             android:popupCharacters="@string/key_ad11_alt" />res/xml/kbd_full.xml
+<!--        TODO: messiar87 , ideally this shold be combined with bottoom left and right naviation key upon shift press
+will do later when time-->
+        <Key
+            android:codes="@integer/key_home"
+            android:isModifier="true"
+            android:keyLabel="Hm" />
+        <Key
+            android:codes="@integer/key_space"
+            android:keyIcon="@drawable/sym_keyboard_space"
+            android:iconPreview="@drawable/sym_keyboard_feedback_space"
+            android:keyWidth="9%p"
+            android:isModifier="true" />
+        <Key
+            android:codes="@integer/key_end"
+            android:isModifier="true"
+            android:keyLabel="Ed"
+            />
+
+
+        <Key
+            android:keyLabel="@string/key_bksl_main"
+            android:shiftLabel="@string/key_bksl_shift"
+            android:popupKeyboard="@xml/kbd_popup_template"
+            android:popupCharacters="@string/key_bksl_alt"
+             />
         <Key
             android:keyLabel="@string/key_ad12_main"
             android:shiftLabel="@string/key_ad12_shift"
@@ -56,33 +84,16 @@
             android:shiftLabel="@string/key_ae12_shift"
             android:popupKeyboard="@xml/kbd_popup_template"
             android:popupCharacters="@string/key_ae12_alt" />
-<!--        TODO: messiar87 , ideally this shold be combined with bottoom left and right naviation key upon shift press
-will do later when time-->
-        <Key
-            android:codes="@integer/key_home"
-            android:isModifier="true"
-            android:keyLabel="Home" />
-        <Key
-            android:codes="@integer/key_end"
-            android:isModifier="true"
-            android:keyLabel="End"
-            />
-
-        <Key
-            android:keyLabel="@string/key_bksl_main"
-            android:shiftLabel="@string/key_bksl_shift"
-            android:popupKeyboard="@xml/kbd_popup_template"
-            android:popupCharacters="@string/key_bksl_alt"
-             />
         <Key
             android:codes="@integer/key_delete"
             android:keyIcon="@drawable/sym_keyboard_delete"
             android:iconPreview="@drawable/sym_keyboard_feedback_delete"
             android:isModifier="true"
-            android:keyWidth="11.09090909%p"
+            android:keyWidth="15%p"
             android:isRepeatable="true"
             android:keyEdgeFlags="right" />
     </Row>
+
     <Row android:extension="true">
         <Key android:codes="@integer/key_escape" android:keyLabel="Esc" android:isModifier="true" />
         <Key android:keyLabel="`" android:shiftLabel="~" />
@@ -98,10 +109,10 @@ will do later when time-->
     </Row>
 <!--HOW to manual calculate key width-->
 <!--    android ROW: https://developer.android.com/reference/android/inputmethodservice/Keyboard.Row-->
-<!--    row key width = 100%p / number of keys = 100/12 = 8.33-->
+<!--    row key width = 100%p / number of keys = 100/11 = 9.09-->
 <!--    if you want some key width to be different , then adjust both ROW and that key width indiviually-->
     <Row
-        android:keyWidth="8.33%p" >
+        android:keyWidth="9.09%p" >
         <Key
             android:keyLabel="@string/key_tlde_main"
             android:shiftLabel="@string/key_tlde_shift"
@@ -148,15 +159,6 @@ will do later when time-->
             android:shiftLabel=")"
             android:keyEdgeFlags="right"
             />
-
-<!--         android:keyWidth="11.09090909%p"-->
-        <Key
-            android:codes="@integer/key_delete"
-            android:keyIcon="@drawable/sym_keyboard_delete"
-            android:iconPreview="@drawable/sym_keyboard_feedback_delete"
-            android:isModifier="true"
-            android:isRepeatable="true"
-            android:keyEdgeFlags="right" />
     </Row>    
     <Row>
         <Key
@@ -319,30 +321,31 @@ will do later when time-->
             android:keyLabel="Ctrl"
             android:codes="@integer/key_ctrl_left"
             android:isSticky="true"
-            android:keyWidth="8.29090909%p"
+            android:keyWidth="13%p"
             android:isModifier="true" />
         <Key
             android:codes="@integer/key_meta_left"
             android:keyLabel="&#x2756;"
+            android:keyWidth="10%p"
             android:isSticky="true"
             android:isModifier="true" />
         <Key
             android:codes="@integer/key_alt_left"
             android:keyLabel="Alt"
             android:isSticky="true"
-            android:keyWidth="8.29090909%p"
+            android:keyWidth="10%p"
             android:isModifier="true" />
         <Key
             android:codes="@integer/key_space"
             android:keyIcon="@drawable/sym_keyboard_space"
             android:iconPreview="@drawable/sym_keyboard_feedback_space"
-            android:keyWidth="36.87272727%p"
+            android:keyWidth="27%p"
             android:isModifier="true" />
         <Key
             android:codes="@integer/key_fn"
             android:keyLabel="Fn"
             android:isModifier="true"
-            android:keyWidth="8.29090909%p"
+            android:keyWidth="9%p"
             android:keyEdgeFlags="left" />
         <Key
             android:codes="@integer/key_dpad_left"
