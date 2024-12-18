@@ -90,7 +90,7 @@
 
     </Row>
 
-    <Row >
+    <Row android:extension="true">
         <Key android:codes="@integer/key_escape" android:keyLabel="Esc" android:isModifier="true" />
         <Key android:keyLabel="`" android:shiftLabel="~" />
         <Key android:keyLabel="-" android:shiftLabel="_" />
@@ -262,10 +262,10 @@
             android:keyEdgeFlags="right"
             android:popupCharacters="@string/key_ac11_alt" />
     </Row>
-    <Row>
+    <Row android:keyWidth="8.8%p">
         <Key
             android:codes="@integer/key_shift"
-            android:keyWidth="11.09090909%p"
+            android:keyWidth="12%p"
             android:keyIcon="@drawable/sym_keyboard_shift"
             android:iconPreview="@drawable/sym_keyboard_feedback_shift"
             android:isModifier="true"
@@ -311,7 +311,6 @@
             android:codes="@integer/key_f1"
             android:keyLabel="/"
             android:shiftLabel="\?"
-            android:keyWidth="7.09090909%p"
             android:keyEdgeFlags="right" />
     </Row>
     <Row android:rowEdgeFlags="bottom">
@@ -338,7 +337,7 @@
             android:codes="@integer/key_space"
             android:keyIcon="@drawable/sym_keyboard_space"
             android:iconPreview="@drawable/sym_keyboard_feedback_space"
-            android:keyWidth="36%p"
+            android:keyWidth="34%p"
             android:isModifier="true" />
 
         <Key
@@ -359,7 +358,7 @@
             android:keyIcon="@drawable/sym_keyboard_return"
             android:iconPreview="@drawable/sym_keyboard_feedback_return"
             android:isModifier="true"
-            android:keyWidth="13.6363636%p"
+            android:keyWidth="15%p"
             android:keyEdgeFlags="right" />
     </Row>
 </Keyboard>
