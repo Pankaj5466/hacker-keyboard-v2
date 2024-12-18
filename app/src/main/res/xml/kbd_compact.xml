@@ -262,7 +262,8 @@
             android:keyEdgeFlags="right"
             android:popupCharacters="@string/key_ac11_alt" />
     </Row>
-    <Row android:keyWidth="8.8%p">
+    <Row android:keyWidth="8.8%p"
+        android:verticalGap="4dp">
         <Key
             android:codes="@integer/key_shift"
             android:keyWidth="12%p"
