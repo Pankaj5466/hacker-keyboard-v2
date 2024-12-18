@@ -7,4 +7,6 @@
 4. use terminal `./gradlew build -x lint` -> the build should be successful
 5. use android studio makebuild option -> then use app run
 6. then copy past the .apk from ` app/build/outputs/apk/debug/app-debug.apk` to screen being shared on android studio!
-7. modify the kbd_compact.xml layout , build test and repeate until desired functionaly is reached
+7. modify the `kbd_compact.xml` OR `kbd_compact_fn.xml` layout , build test and repeate until desired functionaly is reached
+    you can refer `kbd_full.xml` to see 5 row keyboard keys.
+8. 

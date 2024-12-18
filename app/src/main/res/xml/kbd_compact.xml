@@ -158,8 +158,8 @@
             android:keyWidth="12%p"
             android:isRepeatable="true"
             android:keyEdgeFlags="right" />
-    </Row>    
-    <Row>
+    </Row>
+    <Row >
         <Key
             android:keyLabel="q"
             android:popupKeyboard="@xml/kbd_popup_template"
