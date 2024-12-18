@@ -1473,6 +1473,7 @@ public class LatinIME extends InputMethodService implements
 
             startActivity(new Intent(this, LatinIMESettings.class));
 
+            //TODO: lazy load above, when upgrade from java7 to java8
 //            new Handler(Looper.getMainLooper()).post(() -> {
 //                Intent intent = new Intent(this, LatinIMESettings.class);
 //                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // Add necessary flag
