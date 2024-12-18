@@ -40,6 +40,7 @@ import android.media.AudioManager;
 import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
+import android.os.Looper;
 import android.os.Message;
 import android.os.SystemClock;
 import android.os.Vibrator;
@@ -1464,7 +1465,20 @@ public class LatinIME extends InputMethodService implements
             // Input method selector is available as a button in the soft key area, so just launch
             // HK settings directly. This also works around the alert dialog being clipped
             // in Android O.
+
+
+            Intent intent = new Intent(this, LatinIMESettings.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // Add this flag
+            startActivity(intent);
+
             startActivity(new Intent(this, LatinIMESettings.class));
+
+//            new Handler(Looper.getMainLooper()).post(() -> {
+//                Intent intent = new Intent(this, LatinIMESettings.class);
+//                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // Add necessary flag
+//                startActivity(intent);
+//            });
+
         } else {
             // Show an options menu with choices to change input method or open HK settings.
             if (!isShowingOptionDialog()) {
