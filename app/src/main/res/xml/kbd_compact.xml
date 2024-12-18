@@ -209,14 +209,14 @@
             android:isModifier="true" />
     </Row>
 <!--    (100-4)/11-->
-    <Row   android:keyWidth="8.72%p">
+    <Row   android:keyWidth="8.82%p">
 
 <!--        android:horizontalGap="4.54545454%p"-->
         <Key
             android:keyLabel="a"
             android:popupKeyboard="@xml/kbd_popup_template"
             android:popupCharacters="@string/alternates_for_a"
-            android:horizontalGap="4.0%p"
+            android:horizontalGap="3.0%p"
             android:keyEdgeFlags="left" />res/xml/kbd_full.xml
         <Key
             android:keyLabel="s"
