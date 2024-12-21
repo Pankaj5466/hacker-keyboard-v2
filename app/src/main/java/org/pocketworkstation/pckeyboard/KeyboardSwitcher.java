@@ -83,7 +83,7 @@ public class KeyboardSwitcher implements
 //    private static final int KBD_COMPACT = R.xml.kbd_compact;
 //    private static final int KBD_COMPACT_TWO  = R.xml.kbd_compact_large_space; //TODO: (messiar87) enable and add logic so that both can be set indepedently
 
-    private static final int KBD_COMPACT = R.xml.kbd_compact_large_space;
+    private static final int KBD_COMPACT = R.xml.kbd_compact;
     private static final int KBD_COMPACT_FN = R.xml.kbd_compact_fn;
 
     private LatinKeyboardView mInputView;
